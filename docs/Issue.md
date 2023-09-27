@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**assets** | [**list[Attachment]**](Attachment.md) |  | [optional] 
 **assignee** | [**User**](User.md) |  | [optional] 
 **assignees** | [**list[User]**](User.md) |  | [optional] 
 **body** | **str** |  | [optional] 
@@ -28,4 +29,5 @@ Name | Type | Description | Notes
 **user** | [**User**](User.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

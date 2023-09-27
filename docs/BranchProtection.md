@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **block_on_official_review_requests** | **bool** |  | [optional] 
 **block_on_outdated_branch** | **bool** |  | [optional] 
 **block_on_rejected_reviews** | **bool** |  | [optional] 
-**branch_name** | **str** |  | [optional] 
+**branch_name** | **str** | Deprecated: true | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **dismiss_stale_approvals** | **bool** |  | [optional] 
 **enable_approvals_whitelist** | **bool** |  | [optional] 
@@ -24,9 +24,11 @@ Name | Type | Description | Notes
 **push_whitelist_usernames** | **list[str]** |  | [optional] 
 **require_signed_commits** | **bool** |  | [optional] 
 **required_approvals** | **int** |  | [optional] 
+**rule_name** | **str** |  | [optional] 
 **status_check_contexts** | **list[str]** |  | [optional] 
 **unprotected_file_patterns** | **str** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
