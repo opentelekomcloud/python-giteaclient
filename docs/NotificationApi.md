@@ -1,16 +1,17 @@
-# giteaclient.NotificationApi
+# swagger_client.NotificationApi
 
-All URIs are relative to */api/v1*
+All URIs are relative to *http://gitea.eco.tsi-dev.otc-service.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**notify_get_list**](NotificationApi.md#notify_get_list) | **GET** /notifications | List users&#x27;s notification threads
-[**notify_get_repo_list**](NotificationApi.md#notify_get_repo_list) | **GET** /repos/{owner}/{repo}/notifications | List users&#x27;s notification threads on a specific repo
+[**notify_get_list**](NotificationApi.md#notify_get_list) | **GET** /notifications | List users&#39;s notification threads
+[**notify_get_repo_list**](NotificationApi.md#notify_get_repo_list) | **GET** /repos/{owner}/{repo}/notifications | List users&#39;s notification threads on a specific repo
 [**notify_get_thread**](NotificationApi.md#notify_get_thread) | **GET** /notifications/threads/{id} | Get notification thread by ID
 [**notify_new_available**](NotificationApi.md#notify_new_available) | **GET** /notifications/new | Check if unread notifications exist
 [**notify_read_list**](NotificationApi.md#notify_read_list) | **PUT** /notifications | Mark notification threads as read, pinned or unread
 [**notify_read_repo_list**](NotificationApi.md#notify_read_repo_list) | **PUT** /repos/{owner}/{repo}/notifications | Mark notification threads as read, pinned or unread on a specific repo
 [**notify_read_thread**](NotificationApi.md#notify_read_thread) | **PATCH** /notifications/threads/{id} | Mark notification thread as read by ID
+
 
 # **notify_get_list**
 > list[NotificationThread] notify_get_list(all=all, status_types=status_types, subject_type=subject_type, since=since, before=before, page=page, limit=limit)
@@ -21,46 +22,47 @@ List users's notification threads
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 all = true # bool | If true, show notifications marked as read. Default value is false (optional)
 status_types = ['status_types_example'] # list[str] | Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread & pinned. (optional)
 subject_type = ['subject_type_example'] # list[str] | filter notifications by subject type (optional)
@@ -99,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -113,46 +115,47 @@ List users's notification threads on a specific repo
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 owner = 'owner_example' # str | owner of the repo
 repo = 'repo_example' # str | name of the repo
 all = true # bool | If true, show notifications marked as read. Default value is false (optional)
@@ -195,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -209,46 +212,47 @@ Get notification thread by ID
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 id = 'id_example' # str | id of notification thread
 
 try:
@@ -275,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -289,46 +293,47 @@ Check if unread notifications exist
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 
 try:
     # Check if unread notifications exist
@@ -351,7 +356,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/plain
  - **Accept**: application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -365,46 +370,47 @@ Mark notification threads as read, pinned or unread
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 last_read_at = '2013-10-20T19:20:30+01:00' # datetime | Describes the last point that notifications were checked. Anything updated since this time will not be updated. (optional)
 all = 'all_example' # str | If true, mark all notifications on this repo. Default value is false (optional)
 status_types = ['status_types_example'] # list[str] | Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread. (optional)
@@ -437,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -451,46 +457,47 @@ Mark notification threads as read, pinned or unread on a specific repo
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 owner = 'owner_example' # str | owner of the repo
 repo = 'repo_example' # str | name of the repo
 all = 'all_example' # str | If true, mark all notifications on this repo. Default value is false (optional)
@@ -527,7 +534,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -541,46 +548,47 @@ Mark notification thread as read by ID
 ```python
 from __future__ import print_function
 import time
-import giteaclient
-from giteaclient.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: AccessToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 # Configure API key authorization: AuthorizationHeaderToken
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'# Configure HTTP basic authorization: BasicAuth
-configuration = giteaclient.Configuration()
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: BasicAuth
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 # Configure API key authorization: SudoHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['Sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Sudo'] = 'Bearer'
 # Configure API key authorization: SudoParam
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['sudo'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['sudo'] = 'Bearer'
 # Configure API key authorization: TOTPHeader
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['X-GITEA-OTP'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-GITEA-OTP'] = 'Bearer'
 # Configure API key authorization: Token
-configuration = giteaclient.Configuration()
+configuration = swagger_client.Configuration()
 configuration.api_key['token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = giteaclient.NotificationApi(giteaclient.ApiClient(configuration))
+api_instance = swagger_client.NotificationApi(swagger_client.ApiClient(configuration))
 id = 'id_example' # str | id of notification thread
 to_status = 'read' # str | Status to mark notifications as (optional) (default to read)
 
@@ -609,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -6,12 +6,15 @@ Name | Type | Description | Notes
 **allow_merge_commits** | **bool** |  | [optional] 
 **allow_rebase** | **bool** |  | [optional] 
 **allow_rebase_explicit** | **bool** |  | [optional] 
+**allow_rebase_update** | **bool** |  | [optional] 
 **allow_squash_merge** | **bool** |  | [optional] 
 **archived** | **bool** |  | [optional] 
 **avatar_url** | **str** |  | [optional] 
 **clone_url** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
+**default_allow_maintainer_edit** | **bool** |  | [optional] 
 **default_branch** | **str** |  | [optional] 
+**default_delete_branch_after_merge** | **bool** |  | [optional] 
 **default_merge_style** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **empty** | **bool** |  | [optional] 
@@ -29,6 +32,9 @@ Name | Type | Description | Notes
 **ignore_whitespace_conflicts** | **bool** |  | [optional] 
 **internal** | **bool** |  | [optional] 
 **internal_tracker** | [**InternalTracker**](InternalTracker.md) |  | [optional] 
+**language** | **str** |  | [optional] 
+**languages_url** | **str** |  | [optional] 
+**link** | **str** |  | [optional] 
 **mirror** | **bool** |  | [optional] 
 **mirror_interval** | **str** |  | [optional] 
 **mirror_updated** | **datetime** |  | [optional] 
@@ -51,4 +57,5 @@ Name | Type | Description | Notes
 **website** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

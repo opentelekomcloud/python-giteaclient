@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **encoding** | **str** | &#x60;encoding&#x60; is populated when &#x60;type&#x60; is &#x60;file&#x60;, otherwise null | [optional] 
 **git_url** | **str** |  | [optional] 
 **html_url** | **str** |  | [optional] 
+**last_commit_sha** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **path** | **str** |  | [optional] 
 **sha** | **str** |  | [optional] 
@@ -19,4 +20,5 @@ Name | Type | Description | Notes
 **url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
